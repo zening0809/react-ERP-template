@@ -3,7 +3,8 @@ import { Router, Route, Link, Redirect, hashHistory, browserHistory, IndexRoute 
 
 
 
-import GroupManage from '../containers/powerManage/groupManage.js'
+import Login from '../containers/login/index'
+import GroupManage from '../containers/powerManage/groupManage'
 
 
 
@@ -20,14 +21,13 @@ export default class Routers extends Component {
     render() {
         return (
             <Router history={browserHistory}>
-                <Route path='/' component={GroupManage}
+                <Route path='/' component={Login}
                     onLeave={({ params }) => {
                         console.log('离开了登录页 我们去首页');
                     }}
                 >
-
                 </Route>
-             
+                
             </Router>
         )
     }
