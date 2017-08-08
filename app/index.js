@@ -1,10 +1,11 @@
-require('fetch-ie8');
 
-const React = require('react');
-const render = require('react-dom').render;
+import 'fetch-ie8';
+import React from 'react';
+import reactDom from 'react-dom';
 
 
-render(
+
+reactDom.render(
   <div>hello, world React</div>,
   document.getElementById('app')
 )
